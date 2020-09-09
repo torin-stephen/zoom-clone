@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -13,10 +14,23 @@
     <script src="script.js" defer></script>
     <title>Zoom Clone</title>
     <style>
+        body {
+            background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            color: white;
+            font-family: "Poppins", sans-serif;
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
         #video-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, 300px);
             grid-auto-rows: 300px;
+            margin: auto;
+            width: 50%;
         }
 
         video {
@@ -25,12 +39,29 @@
             object-fit: cover;
             -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
+            border: 5px solid;
+            border-image: linear-gradient(to bottom, #2b68c4 0%, #cf2d6e 100%)1;
+        }
+
+        #header {
+            position: absolute;
+            padding-left: 15px;
+            font-size: 5rem;
+        }
+
+        footer {
+            position: absolute;
+            margin: auto;
+            width: 50%;
         }
     </style>
 </head>
 
 <body>
+    <h1 id="header">Zoom - Clone</h1>
     <div id="video-grid"></div>
 </body>
+
+
 
 </html>
